@@ -9,12 +9,18 @@
 </head>
 
 <body>
-    <h2>Guess the random number between 1 and 10</h2>
-    <input type="number" id="guess">
-    <button onclick="guessFu()">Guess</button>
-    <button onclick="newGame()">New Game</button>
-    <p id="hint"></p>
-    <p id="message">You have 3 chances to guess</p>
+
+    <div class="game">
+        <h2>Guess the random number between 1 and 10</h2>
+        <div>
+            <input placeholder="Input number" type="number" id="guess">
+            <button onclick="guessFu()">Guess</button>
+            <button onclick="newGame()">New Game</button>
+        </div>
+        <p id="hint">Hint</p>
+        <p id="message">You have 3 chances to guess</p>
+
+    </div>
 
     <script src="app.js"></script>
 </body>
