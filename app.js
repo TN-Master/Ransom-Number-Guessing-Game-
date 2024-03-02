@@ -1,6 +1,7 @@
 let random = Math.floor((Math.random() * 10) + 1);
 console.log(random);
 
+let hint = document.getElementById("hint");
 let message = document.getElementById("message");
 
 let count = 3;
@@ -14,6 +15,11 @@ function guessFu() {
         newGame();
     } else {
         count--;
+        if (random>input) {
+            hint.innerHTML = "The random number is greater than your input number.";
+        }else {
+            hint.innerHTML = "The random number is less than your input number."
+        }
         message.innerHTML = "You have "+count+" chances to guess";
     }
 
